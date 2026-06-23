@@ -6,20 +6,27 @@
 
 <head>
     <!-- Meta info -->
-    <meta charset="UTF-8">
-    <meta name="description" content="{{ meta.description }}">
-
-    <!-- OpenGraph -->
-    <meta property="og:title" content="{{ meta.title }}">
-    <meta property="og:description" content="{{ meta.description }}">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% filter indent(width=4) -%}
+    {% block meta -%}
+    {% include "layout_head_meta.jinja" %}
+    {%- endblock %}
+    {%- endfilter %}
 
     <!-- Favicon & title -->
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
-    <title>{{ meta.title }}</title>
+    <title>{% block title %}{{ meta.title }}{% endblock %}</title>
 
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="/static/css/layout.css">
-    
+    {% filter indent(width=4) -%}
+    {% block style -%}
+    {% include "layout_head_style.jinja" %}
+    {%- endblock %}
+    {%- endfilter %}
+
+    <!-- Scripts -->
+    {% filter indent(width=4) -%}
+    {% block scripts -%}
+    {% include "layout_head_scripts.jinja" %}
+    {%- endblock %}
+    {%- endfilter %}
 </head>

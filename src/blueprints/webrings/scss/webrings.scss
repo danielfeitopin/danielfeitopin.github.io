@@ -1,0 +1,11 @@
+.webring {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        margin: 0 15px 15px;
+    }
+}

@@ -1,0 +1,30 @@
+- name: Comunidad @informaticapau
+  badges:
+
+  - name: Informaticapau
+    badge: https://informaticapau.com/webrings/static/img/88x31.gif
+    url: https://informaticapau.com
+
+  - name: Daniel Feito
+    badge: https://danielfeitopin.es/static/img/web_badge.gif
+    url: https://danielfeitopin.es
+
+  - name: ARFNET
+    badge: https://arf20.com/88x31.png
+    url: https://arf20.com
+
+  - name: YeroDev
+    badge: https://yero.dev/88x31.png
+    url: https://yero.dev
+
+  - name: poionix.xyz
+    badge: https://files.poionix.xyz/88x31.png
+    url: https://poionix.xyz/
+
+  - name: JENSEN.NET
+    badge: https://jensen-net.mooo.com/media/88_31.png
+    url: https://jensen-net.mooo.com/
+
+  - name: gxog.xyz
+    badge: https://gxog.xyz/webrings/web_badge
+    url: https://gxog.xyz/

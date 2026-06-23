@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+
+    background-color: grey;
+}
+
+.web-badge {
+    box-sizing: content-box;
+    display: inline-block;
+    width: 88px;
+    height: 31px;
+    border: 1px solid black;
+    background-color: #333333;
+    text-decoration: none;
+
+    img {
+        width: 88px;
+        height: 31px;
+    }
+}

@@ -1,0 +1,31 @@
+{% extends 'layout.jinja' %}
+
+{% block head %}{% include "includes/head.jinja" %}{% endblock head %}
+
+{% block content -%}
+<main>
+    <h1 id="webrings">Web Rings</h1>
+    <article>
+
+        <h2>Mi web badge</h2>
+        <a class="web-badge" href="/">
+            <img src="/static/img/web_badge.gif" alt="88x31 web badge" width="88" height="31">
+        </a>
+        
+
+        <section>
+        {%- for webring in webrings %}
+            <h2 >{{ webring['name'] }}</h2>
+            <div class="webring">
+
+            {%- for badge in webring['badges'] %}
+                <a class="web-badge" target="_blank" title="Link to {{ badge['name'] }}" href="{{ badge['url']}}">
+                    <img src="{{ badge['badge'] }}" alt="Link to {{ badge['name'] }}" onerror="this.style.visibility='hidden'">
+                </a>
+            {% endfor -%}
+            </div>
+        {% endfor -%}
+        </section>
+    </article>
+</main>
+{%- endblock content %}

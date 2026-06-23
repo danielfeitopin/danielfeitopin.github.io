@@ -1,0 +1,8 @@
+{% extends 'layout_head.jinja' %}
+
+{% block title -%}Web Rings | {{ super() }}{% endblock title %}
+
+{% block style -%}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="/{{ bp_name }}/static/css/webrings.css">
+{%- endblock style %}
