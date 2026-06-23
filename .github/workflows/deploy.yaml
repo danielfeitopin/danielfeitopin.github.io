@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Escucha cambios en la rama principal
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest  # Elige un entorno Ubuntu
+
+    steps:
+    # Paso 1: Clonar el repositorio
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # Paso 2: Configurar Python
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.13  # Elige la versión de Python
+
+    # Paso 3: Instalar dependencias de Python
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt
+
+    # Paso 4: Generar el sitio
+    - name: Generate Site
+      run: |
+        python build.py
+        cp CNAME site/
+
+    # Paso 5: Desplegar a GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./site  # Carpeta donde está el sitio generado
