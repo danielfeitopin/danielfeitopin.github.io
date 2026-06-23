@@ -33,7 +33,6 @@ jobs:
 
     # Paso 5: Desplegar a GitHub Pages
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+      uses: actions/deploy-pages@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./site  # Carpeta donde está el sitio generado
+        folder: ./site
