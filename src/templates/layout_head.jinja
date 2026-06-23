@@ -1,0 +1,25 @@
+{% set  meta = {
+        'title': "Daniel Feito",
+        'description': "Página web de Daniel Feito."
+    }
+-%}
+
+<head>
+    <!-- Meta info -->
+    <meta charset="UTF-8">
+    <meta name="description" content="{{ meta.description }}">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="{{ meta.title }}">
+    <meta property="og:description" content="{{ meta.description }}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon & title -->
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+    <title>{{ meta.title }}</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="/static/css/layout.css">
+    
+</head>

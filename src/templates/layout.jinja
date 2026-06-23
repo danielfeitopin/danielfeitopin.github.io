@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+
+{% block head %}{% include "layout_head.jinja" %}{% endblock head %}
+
+<body>
+
+    <!-- Content -->
+    {% filter indent(width=4) -%}
+    {% block content %}{% endblock %}
+    {%- endfilter %}
+
+</body>
+
+</html>
